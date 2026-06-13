@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Outfit, Space_Grotesk } from "next/font/google"
+import { Geist_Mono, Outfit, Space_Grotesk } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -25,7 +25,9 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, "font-sans", outfit.variable, spaceGroteskHeading.variable)}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
